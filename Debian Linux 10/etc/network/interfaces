@@ -1,0 +1,22 @@
+# This file describes the network interfaces available on your system
+# an how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# Configuração da interface de loopback
+auto lo
+iface lo inet loopback
+
+# As configurações abaixo são para VMware Player (ens33 e ens34)
+# Para outro hypervisor, use o comando abaixo para identificar as interfaces
+#	ip address show
+
+# Configuração da interface 1 (Acesso à Internet via NAT) como DHCP
+auto ens33
+iface ens33 inet dhcp
+
+# Configuração da interface 2 (Rede interna) com IP estático
+auto ens34
+iface ens34 inet static
+    address 192.168.0.1
+    netmask 255.255.255.0
