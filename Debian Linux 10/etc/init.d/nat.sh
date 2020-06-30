@@ -21,7 +21,8 @@ case "$1" in
 		echo "Iniciando serviço NAT..."
 		echo 1 > /proc/sys/net/ipv4/ip_forward
 		iptables -t nat -F
-        iptables -t nat -A POSTROUTING -o ens33 -j MASQUERADE
+		# Altere para a interface que acessa a Internet
+        	iptables -t nat -A POSTROUTING -o ens33 -j MASQUERADE
 		;;
 	stop)
 		echo "Parando o serviço NAT..."
