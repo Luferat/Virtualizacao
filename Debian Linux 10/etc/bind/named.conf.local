@@ -1,0 +1,11 @@
+# Arquivo (file) de zona "master" direta do domínio "software.livre"
+zone "software.livre" {
+    type master;
+    file "/etc/bind/direta.dns";
+};
+
+# Arquivo (file) de zona "master" reversa do domínio "software.livre"
+zone "0.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/reversa.dns";
+};
