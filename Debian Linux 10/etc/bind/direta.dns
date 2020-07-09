@@ -1,0 +1,17 @@
+; Arquivo de zona direta para "software.livre"
+
+$TTL    3D
+@       IN      SOA     ns.software.livre. root.software.livre. (
+            2020010901  ; serial
+            8H          ; refresh
+            2H          ; retry
+            4W          ; expire
+            1D          ; minimum
+);
+
+        NS  ns
+
+ns      A        192.168.0.1 ; IP do servidor DNS
+@       A        192.168.0.1 ; IP do domínio master, sem "www"
+server  A        192.168.0.1 ; IP do Server
+www     CNAME    server       ; "www" é um apelido (Canonical NAME) para "server"
