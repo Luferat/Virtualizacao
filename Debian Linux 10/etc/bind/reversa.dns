@@ -1,0 +1,15 @@
+; Arquivo de zona reversa para "software.livre"
+
+$TTL    3D
+@       IN      SOA     ns.software.livre. root.software.livre. (
+            2019082801  ; serial
+            8H          ; refresh
+            2H          ; retry
+            4W          ; expire
+            1D          ; minimum
+);
+
+                NS      ns.software.livre.
+10  PTR     software.livre.
+10  PTR     ns.software.livre.
+10  PTR     server.software.livre.
