@@ -7,16 +7,17 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
-# As configurações abaixo são para VMware Player (ens33 e ens34)
-# Para outro hypervisor, use o comando abaixo para identificar as interfaces
+# PUse o comando abaixo para identificar as interfaces de rede a serem configuradas
 #	ip address show
 
-# Configuração da interface 1 (Acesso à Internet via NAT) como DHCP
+# Configuração da interface 1 como DHCP
 auto enp0s3
 iface enp0s3 inet dhcp
 
-# Configuração da interface 2 (Rede interna) com IP estático
+# Configuração da interface 2 com IP estático
 auto enp0s8
 iface enp0s8 inet static
-    address 192.168.0.1
+    address 192.168.1.200
     netmask 255.255.255.0
+    gateway 192.168.1.1
+
