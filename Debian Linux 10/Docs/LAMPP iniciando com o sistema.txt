@@ -1,0 +1,33 @@
+Configurando o LAMPP para iniciar com o sistema
+
+ 1. Logue-se no sistema como "root";
+ 
+ 2. Edite o arquivo "/opt/lampp/lampp":
+ 
+    Localize    --> # Default-Start: ...
+		Altere para --> # Default-Start: 2 3 4 5
+		
+		Localize    --> # Default-Stop: ...
+		Altere para --> # Default-Stop: 0 1 6
+		
+ 3. Abra um terminal de comandos;
+ 
+ 4. Crie um link para inicialização do LAMPP, comandando:
+ 
+    ln -s /opt/lampp/lampp /etc/init.d/lampp
+		
+ 5. Torne o LAMPP inicializável, comandando:
+ 
+    update-rc.d lampp defaults
+		
+ 6. Reinicie o sistema comandando:
+ 
+    reboot
+		
+ 7. Verifique o funcionamento do LAMPP, acessando o URL:
+ 
+    http://localhost           ou
+		http://ip_do_servidor      ou
+		http://nome_do_servidor
+		
+--- EOF ---
