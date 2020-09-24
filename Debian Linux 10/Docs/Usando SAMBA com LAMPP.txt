@@ -1,0 +1,40 @@
+Usando o SAMBA com o LAMPP
+
+ 1. Logue-se como "root" em um terminal;
+
+ 2. Atualize a lista de pacotes e instale o SAMBA, comandando:
+ 
+     apt update
+     apt install samba
+     
+ Durante a instalação, responda <Não> para a pergunta sobre "WINS".
+ 
+ 3. Edite o arquivo "/etc/samba/smb.conf":
+ 
+    Adicione, logo abaixo de [global]
+    
+        inherit permissions = yes
+    
+    Adicione no final do arquivo
+    
+        [lampp]
+            comment = Servidor Web
+            path = /opt/lampp
+            browseable = yes
+            read only = no
+            guest ok = yes
+            create mask = 777
+            force create mode = 777
+            directory mask = 777
+            force directory mode = 777
+            
+ Na primeira linha, troque "lampp" pelo nome que deseja para o copartilhamento.
+ 
+ 4. No Windows, abra o "Windows Explorer" e acesse:
+
+    \\ip_do_servidor\lampp ou
+    \\nome_do_servidor\lampp
+    
+ Troque "lampp" pelo nome dado ao compartilhamento.
+ 
+--- EOF ---
