@@ -1,5 +1,5 @@
 # virtualizacao-de-computadores
- Aulas de:
+Estes documentos são utilizados nas aulas de:
  
  * Virtualização de computadores
  * Administração de servidores Web
