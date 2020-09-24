@@ -1,0 +1,40 @@
+Configurando Acesso FTP no LAMPP
+
+ 1. Edite o arquivo "/opt/lampp/etc/proftpd.conf"
+ 
+    Altere -->  Umask 022
+    Para   -->  Umask 000
+    
+ Salve e feche o arquivo
+
+ 2. Crie um grupo "ftp", comandando no terminal:
+ 
+    groupadd ftp
+    
+ 3. Adicione os usuários do FTP ao grupo. Por exemplo, para adicionar o usuário "luferat", comande:
+ 
+    usermod -a -G ftp luferat
+    
+ 4. Altere os proprietários e as permissões ddo diretório "/opt/lampp/htdocs", comandando:
+ 
+    chown root.ftp htdocs
+    chmod -R 777 htdocs
+    
+ 5. Reinicie o LAMPP, comandando
+ 
+    /opt/lampp/lampp restart
+    
+ 6. Baixe e instale o "Filezilla Client" ou outro cliente FTP:
+ 
+     Filezilla Client --> https://filezilla-project.org/download.php?type=client
+ 
+ 7. Acesse o servidor pelo Filezilla Client:
+ 
+    Endereço: Endereço IP ou nome do servidor Web
+    Porta: 21
+    Usuário: luferat
+    Senha: 12345
+    
+--- EOF ---
+              
+
