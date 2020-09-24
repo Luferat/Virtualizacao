@@ -1,0 +1,32 @@
+Configurando o acesso remoto ao PHPMyAdmin
+
+ 1. Logue-se no sistema como "root";
+ 
+ 2. Edite o arquivo /opt/lampp/etc/extra/httpd-xampp.conf:
+
+    Localize:
+		
+		    <Directory "/opt/lampp/phpmyadmin">
+            AllowOverride AuthConfig
+            Require local
+        ...
+				
+    Altere para:
+		
+        <Directory "/opt/lampp/phpmyadmin">
+				    AllowOverride AuthConfig
+				    Require all granted
+				...
+ 	
+ Salve e feche o arquivo.
+ 
+ 3. Reinicie o LAMPP, comandando, em um terminal:
+
+    /opt/lampp/lampp restart
+		
+ 4. No Windows, acesse o URL:
+ 
+    http://ip_do_servidor/phpmyadmin    ou
+		http://nome_do_servidor/phpmyadmin
+		
+--- EOF ---
