@@ -6,17 +6,17 @@ Configurando o acesso remoto ao PHPMyAdmin
 
     Localize:
 		
-		    <Directory "/opt/lampp/phpmyadmin">
+        <Directory "/opt/lampp/phpmyadmin">
             AllowOverride AuthConfig
             Require local
-        ...
+            ...
 				
     Altere para:
 		
         <Directory "/opt/lampp/phpmyadmin">
-				    AllowOverride AuthConfig
-				    Require all granted
-				...
+            AllowOverride AuthConfig
+            Require all granted
+            ...
  	
  Salve e feche o arquivo.
  
@@ -27,6 +27,6 @@ Configurando o acesso remoto ao PHPMyAdmin
  4. No Windows, acesse o URL:
  
     http://ip_do_servidor/phpmyadmin    ou
-		http://nome_do_servidor/phpmyadmin
+    http://nome_do_servidor/phpmyadmin
 		
 --- EOF ---
