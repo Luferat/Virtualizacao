@@ -19,7 +19,7 @@ Configurando Acesso FTP no LAMPP
  
     usermod -a -G ftp luferat
     
- 6. Altere os proprietários e as permissões ddo diretório "/opt/lampp/htdocs", comandando:
+ 6. Altere os proprietários e as permissões do diretório "/opt/lampp/htdocs", comandando:
  
     chown root.ftp /opt/lampp/htdocs
     chmod -R 777 /opt/lampp/htdocs
@@ -28,7 +28,7 @@ Configurando Acesso FTP no LAMPP
  
     /opt/lampp/lampp restart
     
- 8. Baixe e instale o "Filezilla Client" ou outro cliente FTP:
+ 8. Baixe e instale o "Filezilla Client" ou outro cliente FTP no Windows Hospedeiro:
  
      Filezilla Client --> https://filezilla-project.org/download.php?type=client
  
