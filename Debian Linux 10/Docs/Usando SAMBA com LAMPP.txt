@@ -30,6 +30,8 @@ Usando o SAMBA com o LAMPP
             
  Na primeira linha, troque "lampp" pelo nome que deseja para o copartilhamento.
  
+  Salve e feche o arquivo.
+ 
  4. No Windows, abra o "Windows Explorer" e acesse:
 
     \\ip_do_servidor\lampp ou
