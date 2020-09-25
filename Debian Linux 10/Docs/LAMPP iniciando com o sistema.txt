@@ -4,11 +4,13 @@ Configurando o LAMPP para iniciar com o sistema
  
  2. Edite o arquivo "/opt/lampp/lampp":
  
-    Localize    --> # Default-Start: ...
-		Altere para --> # Default-Start: 2 3 4 5
+    Localize    --> # Default-Start: 3 5
+    Altere para --> # Default-Start: 2 3 4 5
 		
-		Localize    --> # Default-Stop: ...
-		Altere para --> # Default-Stop: 0 1 6
+    Localize    --> # Default-Stop: 0 1 2 6
+    Altere para --> # Default-Stop: 0 1 6
+    
+ Salve e feche o arquivo.    
 		
  3. Abra um terminal de comandos;
  
@@ -27,7 +29,7 @@ Configurando o LAMPP para iniciar com o sistema
  7. Verifique o funcionamento do LAMPP, acessando o URL:
  
     http://localhost           ou
-		http://ip_do_servidor      ou
-		http://nome_do_servidor
+    http://ip_do_servidor      ou
+    http://nome_do_servidor
 		
 --- EOF ---
