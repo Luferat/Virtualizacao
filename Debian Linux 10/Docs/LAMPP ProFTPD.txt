@@ -21,8 +21,8 @@ Configurando Acesso FTP no LAMPP
     
  6. Altere os proprietários e as permissões ddo diretório "/opt/lampp/htdocs", comandando:
  
-    chown root.ftp htdocs
-    chmod -R 777 htdocs
+    chown root.ftp /opt/lampp/htdocs
+    chmod -R 777 /opt/lampp/htdocs
     
  7. Reinicie o LAMPP, comandando
  
